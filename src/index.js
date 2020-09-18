@@ -6,7 +6,7 @@ const fs = require('fs-extra');
 const shell = require('shelljs');
 
 const engine = require('../package.json').engines.node;
-
+const curr = process.cwd();
 process.chdir(__dirname);
 
 program.version(engine);
@@ -20,7 +20,7 @@ const node = {
 
 const runBuild = () => {
   
-  shell.cd(CWD);
+  shell.cd(curr);
   shell.mkdir('_server');
 
   console.log(chalk.green('Initialized _server directory'));
@@ -30,12 +30,11 @@ const runBuild = () => {
   console.log(
     chalk.yellow(
       'Building Express app in',
-      `${CWD}/_server`,
+      `${curr}/_server`,
     ),
   );
 
   fs.copyFileSync(node.index, './index.js', (err) => console.log(err));
-
 
 }
 
