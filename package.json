@@ -1,6 +1,6 @@
 {
   "name": "@hi-matbub/build",
-  "version": "0.1.0",
+  "version": "0.0.12",
   "main": "src/index.js",
   "bin": {
     "build": "src/index.js"
