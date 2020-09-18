@@ -3,8 +3,8 @@ const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
-const { NODE_ENV } = require('./src/config')
-const exampleRouter = require('./src/example_router')
+const { NODE_ENV } = require('./config')
+const exampleRouter = require('./example_router')
 
 const app = express()
 
