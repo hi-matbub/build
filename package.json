@@ -1,12 +1,12 @@
 {
   "name": "@hi-matbub/build",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "main": "src/index.js",
   "bin": {
     "build": "src/index.js"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --require test/setup.js"
   },
   "dependencies": {
     "chai": "^4.2.0",
@@ -29,7 +29,7 @@
     "url": "git+https://github.com/hi-matbub/build.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hi-matbub/build/issues"
   },

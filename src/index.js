@@ -41,7 +41,7 @@ const runBuild = () => {
   shell.cd('_server');
 
   console.log(
-    chalk.bgYellow(
+    chalk.green(
       'Building Express app in',
       `${CWD}/_server`,
     ),
@@ -78,11 +78,7 @@ const runBuild = () => {
   fs.copyFileSync(node.test.setup, './test/setup.js', (err) => console.log(err));
   console.log(chalk.green('    └── setup.js'))
 
-  console.log(chalk.bgGreen(`Build ran successfully!`))
-  console.log(chalk.green(`What's next?`))
-  console.log(`$ cd _server && npm i`)
-  console.log(`$ npm run dev`)
-  
+  console.log(chalk.green('_server has been set up successfully.'))
 }
 
 runBuild()
