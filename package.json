@@ -6,7 +6,10 @@
     "build": "src/index.js"
   },
   "scripts": {
-    "test": "mocha --require test/setup.js"
+    "test": "mocha --require test/setup.js",
+    "prettier": "prettier --config .prettierrc --write \"**/*.js\"",
+    "prettier-docs": "prettier --config .prettierrc --write \"**/*.md\"",    
+    "lint": "eslint --cache \"**/*.js\""
   },
   "dependencies": {
     "chai": "^4.2.0",
@@ -34,5 +37,25 @@
     "url": "https://github.com/hi-matbub/build/issues"
   },
   "homepage": "https://github.com/hi-matbub/build#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run prettier",
+      "npm run eslint --fix"
+    ],
+    "*.md": [
+      "npm run prettier-docs"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
