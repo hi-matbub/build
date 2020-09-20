@@ -189,7 +189,7 @@ describe('package.json', () => {
   it('Package lint-staged should match', () => {
     const actual = package['lint-staged'];
     const expected = {
-      '*.js': ['npm run prettier', 'npm run eslint --fix'],
+      '*.js': ['npm run prettier', 'eslint --fix'],
       '*.md': ['npm run prettier-docs'],
     };
     expect(actual).to.deep.equal(expected);
