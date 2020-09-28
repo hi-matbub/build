@@ -34,55 +34,55 @@ const runBuild = () => {
   shell.cd(CWD);
   shell.mkdir('_server');
 
-  console.log(chalk.green('Initialized _server directory'));
+  console.log('Initialized ', chalk.green('_server'), ' directory!');
 
   shell.cd('_server');
 
-  console.log(chalk.green('Building Express app in', `${CWD}/_server`));
+  console.log(`Building Express app in ${CWD}/_server`);
 
-  console.log(chalk.green('_server'));
+  console.log('_server');
   fs.copyFileSync(node.gitIgnore, '.gitignore', (err) => console.log(err));
-  console.log(chalk.green('├── .gitignore'));
+  console.log('├── .gitignore');
   fs.copyFileSync(node.exampleEnv, '.env', (err) => console.log(err));
-  console.log(chalk.green('├── .env'));
+  console.log('├── .env');
   fs.copyFileSync(node.examplePackage, 'package.json', (err) =>
     console.log(err),
   );
-  console.log(chalk.green('├── package.json'));
+  console.log('├── package.json');
   fs.copyFileSync(node.readMe, 'README.md', (err) => console.log(err));
-  console.log(chalk.green('├── README.md'));
+  console.log('├── README.md');
 
   fs.mkdirSync('./src');
-  console.log(chalk.green('├── src'));
+  console.log('├── src');
 
   fs.copyFileSync(node.src.config, './src/config.js', (err) =>
     console.log(err),
   );
-  console.log(chalk.green('│   ├── config.js'));
+  console.log('│   ├── config.js');
   fs.copyFileSync(node.src.app, './src/app.js', (err) => console.log(err));
-  console.log(chalk.green('│   ├── app.js'));
+  console.log('│   ├── app.js');
   fs.copyFileSync(node.src.server, './src/server.js', (err) =>
     console.log(err),
   );
-  console.log(chalk.green('│   ├── server.js'));
+  console.log('│   ├── server.js');
   fs.copyFileSync(node.src.exampleRouter, './src/example_router.js', (err) =>
     console.log(err),
   );
-  console.log(chalk.green('│   └── example_router.js'));
+  console.log('│   └── example_router.js');
 
   fs.mkdirSync('./test');
-  console.log(chalk.green('└──  test'));
+  console.log('└──  test');
 
   fs.copyFileSync(node.test.appSpec, './test/app.spec.js', (err) =>
     console.log(err),
   );
-  console.log(chalk.green('    ├── app.spec.js'));
+  console.log('    ├── app.spec.js');
   fs.copyFileSync(node.test.setup, './test/setup.js', (err) =>
     console.log(err),
   );
-  console.log(chalk.green('    └── setup.js'));
+  console.log('    └── setup.js');
 
-  console.log(chalk.green('_server has been set up successfully.'));
+  console.log(chalk.green('_server'), 'has been set up successfully.');
 };
 
 runBuild();
