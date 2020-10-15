@@ -1,8 +1,8 @@
 const package = require('../src/lib/example_package.json');
 
 describe('package.json for boilerplate', () => {
-  it("Package name should read 'express.js server'", () => {
-    const expected = 'express.js server';
+  it("Package name should read 'express-server'", () => {
+    const expected = 'express-server';
     const actual = package.name;
 
     expect(actual).to.equal(expected);
@@ -111,7 +111,7 @@ describe('package.json for boilerplate', () => {
   it('Package author should exist', () => {
     const actual = package.author;
 
-    expect(actual).to.equal('');
+    expect(actual).to.equal('@hi-matbub');
   });
 
   it('Package dependencies should match', () => {

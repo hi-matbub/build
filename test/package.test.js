@@ -14,8 +14,8 @@ describe('package.json', () => {
     expect(actual).to.be.a('string');
   });
 
-  it('Package should match "0.1.4"', () => {
-    const expected = '0.1.4';
+  it('Package should match "0.1.5"', () => {
+    const expected = '0.1.5';
     const actual = package.version;
 
     expect(actual).to.equal(expected);
