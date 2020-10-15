@@ -1,6 +1,6 @@
 {
   "name": "@hi-matbub/build",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "src/index.js",
   "bin": {
     "build": "src/index.js"
@@ -8,7 +8,7 @@
   "scripts": {
     "test": "mocha --require test/setup.js",
     "prettier": "prettier --config .prettierrc --write \"**/*.js\"",
-    "prettier-docs": "prettier --config .prettierrc --write \"**/*.md\"",    
+    "prettier-docs": "prettier --config .prettierrc --write \"**/*.md\"",
     "lint": "eslint --cache \"**/*.js\""
   },
   "dependencies": {

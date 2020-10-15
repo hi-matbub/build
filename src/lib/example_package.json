@@ -1,5 +1,5 @@
 {
-  "name": "express.js server",
+  "name": "express-server",
   "version": "0.0.1",
   "description": "express.js server",
   "main": "src/app.js",
@@ -9,7 +9,7 @@
     "dev": "nodemon src/server.js",
     "audit": "npm audit"
   },
-  "author": "",
+  "author": "@hi-matbub",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
